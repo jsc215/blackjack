@@ -17,5 +17,5 @@
 
 /spec/*
 .rspec
-.blackjack.md
+blackjack.md
 .lesson.yml
