@@ -1,4 +1,3 @@
-require 'pry'
 class Hand
   attr_reader :score
 
