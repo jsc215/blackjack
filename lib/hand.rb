@@ -13,7 +13,7 @@ class Hand
 
   def update_score
     aces = []
-    score = @cards.inject(0) do |score, card|
+    new_score = @cards.inject(0) do |score, card|
       if card.ace?
         aces << card
       elsif card.face_card?
@@ -26,12 +26,12 @@ class Hand
 
     aces.count.times do
       aces.pop
-        if (score + 11 + aces.count) > 21
-        score += 1
+        if (new_score + 11 + aces.count) > 21
+        new_score += 1
         else
-        score += 11
+        new_score += 11
         end
       end
-    score
+    new_score
   end
 end
